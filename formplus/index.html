@@ -32,9 +32,102 @@
       </div>
     </div>
   </nav>
-  <main class="container my-4 flex-grow-1">
-    <h1 class="h3 mb-4">Bienvenue sur FormaPlus</h1>
-  </main>
+main class="container my-4 flex-grow-1">
+  <h1 class="h3 mb-4">Inscription</h1>
+  <form id="formInscription" class="form-page" action="#" method="get">
+    <h2 class="h5 mb-3"><i class="bi bi-person-vcard"></i> Informations personnelles</h2>
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom">
+    </div>
+    <div class="mb-3">
+      <label for="prenom" class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Votre prénom">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Adresse e-mail</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="nom@exemple.com">
+    </div>
+    <div class="mb-3">
+      <label for="mdp" class="form-label">Mot de passe</label>
+      <input type="password" class="form-control" id="mdp" name="mdp">
+    </div>
+    <div class="mb-3">
+      <label for="tel" class="form-label">Téléphone</label>
+      <input type="tel" class="form-control" id="tel" name="tel" placeholder="20 123 456">
+    </div>
+    <div class="mb-3">
+      <label for="naissance" class="form-label">Date de naissance</label>
+      <input type="date" class="form-control" id="naissance" name="naissance">
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Âge</label>
+      <input type="number" class="form-control" id="age" name="age" min="16" max="60">
+    </div>
+    <div class="mb-3">
+      <label for="site" class="form-label">Site web ou profil LinkedIn</label>
+      <input type="url" class="form-control" id="site" name="site" placeholder="https://...">
+    </div>
+    <div class="mb-3">
+      <label for="heure" class="form-label">Heure de disponibilité pour un appel</label>
+      <input type="time" class="form-control" id="heure" name="heure">
+    </div>
+    <h2 class="h5 mb-3 mt-4"><i class="bi bi-mortarboard"></i> Formation souhaitée</h2>
+    <div class="mb-3">
+      <label for="domaine" class="form-label">Domaine</label>
+      <select class="form-select" id="domaine" name="domaine">
+        <option selected disabled value="">Choisir un domaine</option>
+        <option value="web">Développement web</option>
+        <option value="mobile">Développement mobile</option>
+        <option value="reseaux">Réseaux</option>
+        <option value="bureautique">Bureautique</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="langages" class="form-label">Langages déjà pratiqués</label>
+      <select class="form-select" id="langages" name="langages" multiple size="4">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="php">PHP</option>
+        <option value="dart">Dart</option>
+        <option value="python">Python</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="motivation" class="form-label">Motivation</label>
+      <textarea class="form-control" id="motivation" name="motivation" rows="4"></textarea>
+    </div>
+        <div class="mb-3">
+      <label for="ville" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="ville" name="ville" list="villes" placeholder="Choisir ou saisir une ville">
+      <datalist id="villes">
+        <option value="Tunis"></option>
+        <option value="Nabeul"></option>
+        <option value="Sousse"></option>
+        <option value="Sfax"></option>
+        <option value="Bizerte"></option>
+        <option value="Monastir"></option>
+      </datalist>
+    </div>
+        <div class="mb-3">
+      <label for="couleur" class="form-label">Couleur préférée pour votre badge</label>
+      <input type="color" class="form-control form-control-color" id="couleur" name="couleur" value="#0d6efd">
+    </div>
+    <div class="mb-3">
+      <label for="cv" class="form-label">CV (PDF)</label>
+      <input type="file" class="form-control" id="cv" name="cv" accept=".pdf">
+    </div>
+    <div class="mb-3">
+      <label for="niveau" class="form-label">
+        Niveau en informatique :
+        <span id="niveauValeur" class="badge text-bg-primary">5</span>
+      </label>
+      <input type="range" class="form-range" id="niveau" name="niveau" min="0" max="10" step="1" value="5">
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</main>
   <footer class="bg-body-tertiary py-3 mt-auto">
     <div class="container text-center small">&copy; 2026 FormaPlus – Talel sifi</div>
   </footer>
